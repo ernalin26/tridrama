@@ -5,7 +5,7 @@ VARIABLES
 	/* orange background */
 	--clr-primary: #fcbf49;
 	--clr-lightOrange: #ffe5d9;
-	--clr-darkOrange: #F6CE7A;
+	--clr-darkOrange: #f6ce7a;
 	/* orange button */
 	--clr-button: #ff9f1c;
 	/* dark grey used for fonts */
@@ -13,8 +13,8 @@ VARIABLES
 	--clr-greyBody: #50514f;
 	--clr-white: #fff;
 
-	--ff-primary: "Montserrat", sans-serif;
-	--ff-heading: "Muli", sans-serif;
+	--ff-primary: "Poppins", sans-serif;
+	--ff-heading: "Montserrat", sans-serif;
 	--transition: all 0.3s linear;
 	--spacing: 0.25rem;
 	--radius: 0.5rem;
@@ -36,6 +36,7 @@ body {
 	background: var(--clr-white);
 	line-height: 1.5;
 	font-size: 0.875rem;
+	width: 98.9vw;
 }
 
 img {
@@ -117,11 +118,12 @@ p {
 	background: var(--clr-button);
 	color: var(--clr-white);
 	text-align: center;
-	padding: 0.375rem 0.75rem;
+	padding: 0.75rem;
 	letter-spacing: var(--spacing);
 	display: inline-block;
 	transition: var(--transition);
-	font-size: 0.75rem;
+	font-size: 0.85rem;
+	font-family: var(--ff-primary);
 	border: 2px solid transparent;
 	border-radius: 5px;
 	cursor: pointer;
@@ -144,6 +146,7 @@ p {
 
 .section-heading {
 	margin-bottom: 1.75rem;
+	font-family: var(--ff-heading);
 }
 
 .section-text {
@@ -166,6 +169,7 @@ p {
 HERO
 ========= */
 .hero {
+	overflow: hidden;
 	min-height: 100vh;
 	background: var(--clr-primary);
 }
@@ -174,7 +178,7 @@ HERO
 	margin: 0 auto;
 	width: 100px;
 	height: 100px;
-	padding-top: 50px;
+	padding-top: 1rem;
 }
 
 .hero-banner {
@@ -182,6 +186,12 @@ HERO
 	color: #fff;
 	padding: 2rem 3rem;
 	margin: 3rem 0;
+}
+
+.hero-banner h1 {
+	font-family: var(--ff-heading);
+	margin-top: 2rem;
+	font-size: 2.5rem;
 }
 
 .hero-banner p {
@@ -271,6 +281,11 @@ HERO
 
 	.hero-banner {
 		max-width: 50%;
+		margin-top: 0;
+	}
+
+	.hero-banner h1 {
+		margin-top: 0;
 	}
 
 	.hero-banner p {
@@ -281,6 +296,7 @@ HERO
 /* =========
 OUR TEACHERS
 ========= */
+
 .section-title__info {
 	margin: 2rem 2rem;
 }
@@ -305,7 +321,7 @@ OUR TEACHERS
 	background: var(--clr-button);
 	border: 1px solid transparent;
 	border-radius: 50%;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 1.5rem;
 	position: absolute;
 	left: 50%;
 	top: 0;
@@ -317,7 +333,7 @@ OUR TEACHERS
 	height: 200px;
 	border: 1px solid transparent;
 	border-radius: 50%;
-	margin: 3rem auto;
+	margin: 4rem auto 2rem auto;
 	object-fit: cover;
 }
 
@@ -329,10 +345,6 @@ OUR TEACHERS
 	margin-top: -0.75rem;
 	margin-bottom: 1rem;
 	color: var(--clr-primary);
-}
-
-.profile-info__text {
-	margin: 1rem 2rem;
 }
 
 @media (min-width: 576px) {
@@ -385,7 +397,6 @@ OFFER
 #what-we-offer {
 	display: flex;
 	justify-content: center;
-	width: 90vw;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -414,8 +425,6 @@ OFFER
 }
 
 .offer-button .btn {
-	padding: 0.75rem 1.5rem;
-	font-size: 1rem;
 	margin-bottom: 2rem;
 	justify-content: center;
 }
@@ -475,18 +484,12 @@ FACILITATOR
 }
 
 .facilitator-container {
-	width: 100vw;
 	background: var(--clr-lightOrange);
 }
 
 .facilitator-info {
 	text-align: center;
 	padding: 3rem;
-}
-
-.facilitator-button .btn {
-	padding: 0.75rem 1.5rem;
-	font-size: 1rem;
 }
 
 @media (min-width: 786px) {
@@ -526,7 +529,6 @@ SUPPORT
 .support-container {
 	display: flex;
 	flex-direction: column;
-	width: 100vw;
 	margin: 2rem auto;
 	text-align: center;
 }
@@ -535,11 +537,6 @@ SUPPORT
 	text-align: center;
 	width: 90vw;
 	margin: 0 auto;
-}
-
-.support-button .btn {
-	padding: 0.75rem 1.5rem;
-	font-size: 1rem;
 }
 
 .support-img__container {
@@ -577,7 +574,6 @@ CONTACT
 ========= */
 .contact-container {
 	background: var(--clr-lightOrange);
-	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
@@ -610,7 +606,7 @@ CONTACT
 	padding: 0.75rem 1rem;
 	border: none;
 	margin-bottom: 1.25rem;
-	background: #F8F7FF;
+	background: #f8f7ff;
 	border-radius: var(--radius);
 	text-transform: uppercase;
 	letter-spacing: var(--spacing);
